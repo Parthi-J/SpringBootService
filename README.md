@@ -22,3 +22,15 @@ logging:
       springframework:
         web: debug
 ```
+
+** JAR Execute command**  
+#####Using Command Line  
+```
+$ java -jar target/*.jar --spring.config.location=file:///<<YAML_CONFIG_PATH>>/*.yml  
+```
+
+#####Using Environment Variable  
+```
+$ export SPRING_CONFIG_LOCATION=file:///<<YAML_CONFIG_PATH>>/*.yml  
+$ java -jar target/*.jar  
+```
