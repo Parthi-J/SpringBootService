@@ -1,7 +1,7 @@
 # Spring Boot Service
 
-### Application Configuration
-** Save the configuration as *.yml **
+## Application Configuration
+Save the configuration as *.yml
 
 ```yml
 server:
@@ -23,13 +23,13 @@ logging:
         web: debug
 ```
 
-** JAR Execute command**  
-#####Using Command Line  
+## Execute JAR    
+### Using Command Line  
 ```
 $ java -jar target/*.jar --spring.config.location=file:///<<YAML_CONFIG_PATH>>/*.yml  
 ```
 
-#####Using Environment Variable  
+### Using Environment Variable  
 ```
 $ export SPRING_CONFIG_LOCATION=file:///<<YAML_CONFIG_PATH>>/*.yml  
 $ java -jar target/*.jar  
