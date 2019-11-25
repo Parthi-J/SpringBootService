@@ -9,18 +9,33 @@ server:
   port: 8000
 
 spring:
-    devtools:
+  devtools:
     restart:
       enabled: true
   main:
     lazy-initialization: false
+  output:
+    ansi:
+      enabled: DETECT
+  jpa.hibernate.ddl-auto: update
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/spring_boot
+    username: root
+    password: parthi@123
     
+
 logging:
+  file:
+#    name: spring_boot_service.log
+    path: /var/tmp
+    max-size: 25MB 
+    max-history: 3
   level:
     root: info
-    org:
+    org: 
       springframework:
         web: debug
+
 ```
 
 ## Execute JAR    
