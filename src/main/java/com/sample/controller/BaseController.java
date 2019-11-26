@@ -10,6 +10,7 @@ import java.util.Date;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.extern.log4j.Log4j2;
@@ -25,7 +26,7 @@ public class BaseController {
 	private static final String DATE_FORMAT = "MMM d, yyyy HH:mm a";
 
 	@RequestMapping("/")
-	public String main() {
+	public @ResponseBody String main() {
 		log.info("Main function initialization...");
 		Date date = new Date();
 		DateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
